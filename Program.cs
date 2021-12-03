@@ -1,6 +1,12 @@
 ﻿
 using System;
+using System.Diagnostics;
 using Advent_of_Code_2021;
 
-Console.WriteLine("Hello, World!");
-Day02.Run();
+var timer = new Stopwatch();
+timer.Start();
+
+Day03.Run();
+
+timer.Stop();
+Console.WriteLine($"Done in {timer.ElapsedMilliseconds/1000d} seconds");
