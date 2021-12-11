@@ -11,4 +11,13 @@ public static class PointExtension
     public static Point West(this Point p) { return new Point(p.X - 1, p.Y); }
 
     public static List<Point> Neighbors(this Point p) { return new List<Point> { p.North(), p.South(), p.West(), p.East() }; }
+
+    public static List<Point> AllNeighbors(this Point p)
+    {
+        return new List<Point>
+        {
+            p.North(), p.South(), p.West(), p.East(),
+            p.North().East(), p.North().West(), p.South().East(), p.South().West()
+        };
+    }
 }
