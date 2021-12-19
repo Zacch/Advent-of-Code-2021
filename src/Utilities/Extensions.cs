@@ -1,6 +1,7 @@
 using System.Drawing;
-
+// ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable once CheckNamespace
+
 namespace Extensions;
 
 public static class PointExtension
