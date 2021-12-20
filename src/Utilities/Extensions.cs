@@ -4,8 +4,17 @@ using System.Drawing;
 
 namespace Extensions;
 
+public static class EnumerableExtension
+{
+    public static IEnumerable<(T item, int index)> WithIndex<T>(this IEnumerable<T> self) 
+        => self.Select((item, index) => (item, index)); 
+}
+
 public static class PointExtension
 {
+    public static Point Plus(this Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
+    public static Point Minus(this Point a, Point b) => new Point(a.X - b.X, a.Y - b.Y);
+    
     public static Point North(this Point p) { return new Point(p.X, p.Y - 1); }
     public static Point South(this Point p) { return new Point(p.X, p.Y + 1); }
     public static Point East(this Point p) { return new Point(p.X + 1, p.Y); }
