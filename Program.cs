@@ -5,8 +5,7 @@ using Advent_of_Code_2021;
 var timer = new Stopwatch();
 timer.Start();
 
-Day23.Run();
-Day23Part2.Run();
+Day24.Run();
 
 timer.Stop();
 Console.WriteLine($"Done in {timer.ElapsedMilliseconds/1000d} seconds");
