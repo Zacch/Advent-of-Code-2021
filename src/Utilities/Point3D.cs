@@ -79,10 +79,10 @@ public class Point3D :IEquatable<Point3D>, IComparable<Point3D>
             _ => throw new ArgumentOutOfRangeException(nameof(orientation), orientation, null)
         };
     
-    public static Point3D operator +(Point3D a, Point3D b) => new Point3D(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
-    public static Point3D operator -(Point3D a, Point3D b) => new Point3D(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+    public static Point3D operator +(Point3D a, Point3D b) => new(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+    public static Point3D operator -(Point3D a, Point3D b) => new(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
     
-    public Point3D DistanceTo(Point3D other) => new Point3D(Math.Abs(X - other.X), Math.Abs(Y - other.Y), Math.Abs(Z - other.Z));
+    public Point3D DistanceTo(Point3D other) => new(Math.Abs(X - other.X), Math.Abs(Y - other.Y), Math.Abs(Z - other.Z));
     public long ManhattanDistanceTo(Point3D other) => Math.Abs(X - other.X) + Math.Abs(Y - other.Y) + Math.Abs(Z - other.Z);
     
     

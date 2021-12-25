@@ -12,8 +12,8 @@ public static class EnumerableExtension
 
 public static class PointExtension
 {
-    public static Point Plus(this Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
-    public static Point Minus(this Point a, Point b) => new Point(a.X - b.X, a.Y - b.Y);
+    public static Point Plus(this Point a, Point b) => new(a.X + b.X, a.Y + b.Y);
+    public static Point Minus(this Point a, Point b) => new(a.X - b.X, a.Y - b.Y);
     
     public static Point North(this Point p) { return new Point(p.X, p.Y - 1); }
     public static Point South(this Point p) { return new Point(p.X, p.Y + 1); }
