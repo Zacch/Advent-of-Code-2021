@@ -6,24 +6,26 @@ namespace Advent_of_Code_2021;
 public static class Day24
 {
     
+    /// <summary>
+    /// This day is solved in Java using Choco-solver – see Day24.java.
+    ///
+    /// This method uses an emulation of the ALU to test the two solutions
+    /// calculated by the Java code.
+    /// </summary>
     public static void Run()
     {
         var lines = File.ReadLines("Day24.txt").ToList();
-
-        // These were arrived at by hand:
-        // 1. start with 99999999999999 (or 11111111111111 to find the lowest serial)
-        // 2. run "ExecuteAndLog"
-        // 3. Adjust the first possible digit so that an "eql x w" comparison returns 1
-        // 4. Repeat until the alu's z is 0 at the end
-
-        var highestSerialNumber = 79197919993985;
-        var lowestSerialNumber = 13191913571211;
-
-        ExecuteAndLog(highestSerialNumber.ToString(), lines);
-        ExecuteAndLog(lowestSerialNumber.ToString(), lines);
         
-        WriteLine($"Part 1: {highestSerialNumber}");
-        WriteLine($"Part 2: {lowestSerialNumber}");
+        const long part1Solution = 79197919993985;
+        const long part2Solution = 13191913571211;
+
+        WriteLine($"Part 1: {part1Solution}");
+        ExecuteAndLog(part1Solution.ToString(), lines);
+
+        WriteLine($"_________________________________________________________");
+        WriteLine($"Part 2: {part2Solution}");
+        ExecuteAndLog(part2Solution.ToString(), lines);
+        
     }
     
     private static void ExecuteAndLog(string inputString, List<string> lines)
