@@ -1,0 +1,268 @@
+inp w          w = a
+mul x 0        x = 0
+add x z        
+mod x 26
+div z 1
+add x 12       x = 12
+eql x w        x = 0
+eql x 0        x = 1
+mul y 0        
+add y 25       y = 25
+mul y x
+add y 1  y = 26
+mul z y  
+mul y 0  y = 0
+add y w  
+add y 7  y = a + 7
+mul y x
+add z y  z = a + 7
+
+
+inp w    w = b
+mul x 0
+add x z  x = a + 7
+mod x 26 x = (a + 7) % 26
+div z 1
+add x 13 x = (a + 7) % 26 + 13
+eql x w  x = 0
+eql x 0  x = 1
+mul y 0
+add y 25 y = 25
+mul y x  
+add y 1  y = 26
+mul z y  z = 26 * (a + 7)
+mul y 0
+add y w
+add y 8 
+mul y x  y = b + 8
+add z y  z = 26 * (a + 7) + b + 8
+
+
+inp w    w = c
+mul x 0
+add x z  
+mod x 26 x = b + 8
+div z 1
+add x 13 x = b + 21
+eql x w
+eql x 0  x = 1
+mul y 0
+add y 25
+mul y x
+add y 1  y = 26
+mul z y  z = 26 * (26 * (a + 7) + b + 8)
+mul y 0
+add y w
+add y 10
+mul y x  y = c + 10
+add z y  z = 26 * (26 * (a + 7) + b + 8) + c + 10
+
+inp w    w = d
+mul x 0
+add x z
+mod x 26 x = c + 10
+div z 26
+add x -2 x = c + 8       <--
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 11
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -5
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 15
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 1
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 15
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 8
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10  x = z % 26 + 10
+eql x w
+eql x 0
+mul y 0
+add y 25 
+mul y x
+add y 1   y = 1 or 26
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+
+inp w     w
+mul x 0   x = 0
+add x z
+mod x 26  x = z % 26
+div z 26  z = z / 26
+add x -14 x = z % 26 - 14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+inp w    w = input
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -5
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+
